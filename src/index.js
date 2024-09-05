@@ -43,5 +43,13 @@ function handleSubmit(event){
     event.target.reset()
 }
 
+fetch('https://raw.githubusercontent.com/RikkuX491/flatburger-javascript-project/main/db.json')
+.then(response => response.json())
+.then(apiData => {
+    const foods = apiData.foods
+    foods.forEach(addFoodImageToRestaurantMenu)
+    displayFoodDetails(foods[0])
+})
+
 const newFoodForm = document.getElementById('new-food')
 newFoodForm.addEventListener('submit', handleSubmit)
