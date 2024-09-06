@@ -13,6 +13,13 @@
             <h3>🍔 Flatburger 🍔</h3>
         </header>
 
+        <br/>
+
+        <select id="foods-filter">
+            <option value="all">All</option>
+            <option value="healthy">Healthy</option>
+        </select>
+
         <!-- Restaurant Menu -->
         <div id="restaurant-menu">
             <!-- Food Images Here -->
@@ -38,6 +45,11 @@
             <input type="text" id="new-image" name="image" autocomplete="off" required />
             <label for="new-description">Description: </label>
             <textarea id="new-description" name="description" required></textarea>
+            <label>Healthy? </label>
+            <select id="healthy-select">
+                <option value="healthy">Yes</option>
+                <option value="">No</option>
+            </select>
             <input type="submit" value="Create" />
         </form>
     </body>
